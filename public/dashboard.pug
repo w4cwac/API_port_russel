@@ -1,0 +1,112 @@
+doctype html
+html
+  head
+    title= title
+body 
+    h1 Russel Harbor Dashboard 
+
+    form(action="/users" method="POST" name="addUser") 
+        fieldset 
+            legend Créer un utilisateur
+            label(for="name") Name 
+            input(type="text" name="name" required) 
+            label(for="email")  Email 
+            input(type="email" name="email" required)  
+            label(for="password")  Password 
+            input(type="password" name="password" required) 
+            button(type="submit" style={'margin-left': 1+'rem'}) Créer utilisateur
+
+    form(action="/tableau-de-bord/updateUser" method="POST" name="updatedUser") 
+        fieldset 
+            legend Modifier un utilisateur
+            label(for="user")  Utilisateur à modifier 
+            select(name="user" id="user-select") 
+                each user in users
+                    option(value=user._id)= user.name 
+            button(type="submit" style={'margin-left': 1+'rem'}) Modifier l'utilisateur
+
+    form(action="/tableau-de-bord/deleteUser" method="GET" name="updatedUser") 
+        fieldset 
+            legend Supprimer un utilisateur
+            label(for="user")  Utilisateur à supprimer 
+            select(name="user" id="user-select") 
+                each user in users
+                    option(value=user._id)= user.name
+            button(type="submit" style={'margin-left': 1+'rem'}) Supprimer l'utilisateur
+
+    form(action="/catways" method="POST" name="addCatway") 
+        fieldset 
+            legend Créer un embarquadaire
+            label(for="catwayNumber") Numéro de l'embarquadaire 
+            input(type="text" name="catwayNumber" required) 
+            label(for="type")  Type de l'embarquadaire 
+            input(type="text" name="type" required)  
+            label(for="catwayState")  Description de l'embarquadaire 
+            input(type="text" name="catwayState") 
+            button(type="submit" style={'margin-left': 1+'rem'}) Créer un embarquadaire
+    
+    fieldset 
+        legend Les embarquadaires 
+        button 
+            a(href="/catways") Voir tous les embarquadaires 
+        table 
+            tr 
+                th Numéro d'embarquadaire 
+                th Action 
+            each catway in catways 
+                tr
+                    td= catway.catwayNumber
+                    td 
+                        button
+                            a(href=`/catways/${catway._id}`) En savoir plus
+                    td
+                        button
+                            a(href=`/tableau-de-bord/updateCatway/${catway._id}`)  Modifier l'embarquadaire
+                    td
+                        button
+                            a(href=`/tableau-de-bord/deleteCatway/${catway._id}`)  Supprimer l'embarquadaire
+
+    form(action="/tableau-de-bord/addBooking" method="POST" name="addBooking") 
+        fieldset 
+            legend Créer une réservation
+            label(for="catwayNumber") Numéro de l'embarquadaire 
+            select(name="catwayNumber" id="catway-select") 
+                each catway in catways
+                    option(value=catway)= catway.catwayNumber
+            label(for="bookingId")  Numéro de réservation 
+            input(type="text" name="bookingId" required) 
+            label(for="clientName")  Nom du client 
+            select(name="clientName" id="client-select") 
+                each user in users
+                    option(value=user.name)= user.name
+            label(for="boatName")   Nom du bateau 
+            input(type="text" name="boatName" required)
+            br 
+            br
+            label(for="checkIn")  Date d'entrée 
+            input(type="date" name="checkIn" required) 
+            label(for="checkOut")  Date de sortie 
+            input(type="date" name="checkOut" required) 
+            br
+            br
+            button(type="submit") Créer un embarquadaire
+
+    fieldset 
+        legend Liste des réservation
+        button 
+            a(href=`/catways/${catwayId}/reservations`) Toutes les réservations
+        table 
+            tr 
+                th Numéro d'embarquadaire
+                th Numéro de réservation
+                th Action
+            each book in booking
+                tr
+                    td= book.catwayNumber
+                    td= book.bookingId
+                    td 
+                        button
+                            a(href=`/tableau-de-bord/getBookingInfo/${book._id}`) En savoir plus
+                    td
+                        button
+                            a(href=`/tableau-de-bord/deleteBooking/${book._id}`) Supprimer

@@ -1,0 +1,22 @@
+doctype html
+html
+  head
+    title= title
+body 
+    h1 Information sur la réservation.
+
+    table
+        tr
+            th Id de réservation
+            th Numéro du quai
+            th Nom du client
+            th Nom du bâteau
+            th Date d'entrée
+            th Date de sortie
+        tr
+            td= booking.bookingId
+            td= booking.catwayNumber
+            td= booking.clientName
+            td= booking.boatName
+            td= booking.checkIn
+            td= booking.checkOut

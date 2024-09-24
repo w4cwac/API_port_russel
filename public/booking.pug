@@ -1,0 +1,23 @@
+doctype html
+html
+  head
+    title= title
+body 
+    h1 Liste des réservations.
+
+    table
+      tr
+        th Id de réservation
+        th Numéro du quai
+        th Non du client 
+        th Date d'entrée
+        th Action
+        each book in booking
+          tr
+            td= book.bookingId
+            td= book.catwayNumber
+            td= book.clientName
+            td= book.checkIn
+            td
+              button 
+                a(class='button' href='/catways/'+catway._id+"/reservations/"+book._id) En savoir plus

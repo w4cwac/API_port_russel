@@ -1,0 +1,52 @@
+[
+        {
+            "catwayNumber": 1,
+            "type": "long",
+            "catwayState": "disponible"
+        },
+        {
+            "catwayNumber": 2,
+            "type": "short",
+            "catwayState": "occupé"
+        },
+        {
+            "catwayNumber": 3,
+            "type": "long",
+            "catwayState": "en maintenance"
+        },
+        {
+            "catwayNumber": 4,
+            "type": "short",
+            "catwayState": "disponible"
+        },
+        {
+            "catwayNumber": 5,
+            "type": "long",
+            "catwayState": "réservé"
+        },
+        {
+            "catwayNumber": 6,
+            "type": "short",
+            "catwayState": "hors service"
+        },
+        {
+            "catwayNumber": 7,
+            "type": "long",
+            "catwayState": "en nettoyage"
+        },
+        {
+            "catwayNumber": 8,
+            "type": "short",
+            "catwayState": "occupé"
+        },
+        {
+            "catwayNumber": 9,
+            "type": "long",
+            "catwayState": "disponible"
+        },
+        {
+            "catwayNumber": 10,
+            "type": "short",
+            "catwayState": "en inspection"
+        }
+]

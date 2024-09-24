@@ -1,0 +1,13 @@
+doctype html
+html
+  head
+    title= title
+body 
+    h1= `Uptade catway numéro : ${catway.catwayNumber}`
+
+    form(action="/tableau-de-bord//updateCatway/"+catway._id method="POST") 
+        label(for="catwayState")  Description de l'embarquadaire 
+        br
+        textarea(name="catwayState" rows="6" cols="33")=catway.catwayState 
+        br
+        button(type="submit") Modifier un embarquadaire

@@ -1,0 +1,12 @@
+{
+    "plugins": [],
+    "source": {
+        "include": [ "services", "middlewares" ],
+        "includePAttern": ".js$",
+        "excludePattern": "(node_modules/|docs)" 
+    },
+    "opts": {
+        "recurse": true,
+        "destination": "./docs/"
+    }
+}

@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+    title= title
+body 
+    h1 Liste des embarquadaires.
+
+    table
+      tr
+        th Numéro du quai
+        th Type du quai
+        th Action
+        each catway in catways
+          tr 
+            td= catway.catwayNumber
+            td= catway.type
+            td
+              button 
+                a(class='button' href='/catways/'+catway._id) En savoir plus

@@ -1,0 +1,82 @@
+[
+        {
+            "bookingId": 1001,
+            "catwayNumber": 1,
+            "clientName": "Jean Dupont",
+            "boatName": "Le Navigateur",
+            "checkIn": "2024-08-25T14:00:00Z",
+            "checkOut": "2024-08-27T12:00:00Z"
+        },
+        {
+            "bookingId": 1002,
+            "catwayNumber": 3,
+            "clientName": "Marie Martin",
+            "boatName": "L'Aventurier",
+            "checkIn": "2024-08-26T10:00:00Z",
+            "checkOut": "2024-08-29T16:00:00Z"
+        },
+        {
+            "bookingId": 1003,
+            "catwayNumber": 5,
+            "clientName": "Pierre Leroy",
+            "boatName": "Le Petit Prince",
+            "checkIn": "2024-08-28T09:00:00Z",
+            "checkOut": "2024-08-30T11:00:00Z"
+        },
+        {
+            "bookingId": 1004,
+            "catwayNumber": 2,
+            "clientName": "Sophie Dubois",
+            "boatName": "La Sirène",
+            "checkIn": "2024-09-01T15:00:00Z",
+            "checkOut": "2024-09-03T10:00:00Z"
+        },
+        {
+            "bookingId": 1005,
+            "catwayNumber": 7,
+            "clientName": "Luc Moreau",
+            "boatName": "L'Étoile de Mer",
+            "checkIn": "2024-09-02T12:00:00Z",
+            "checkOut": "2024-09-05T09:00:00Z"
+        },
+        {
+            "bookingId": 1006,
+            "catwayNumber": 4,
+            "clientName": "Émilie Petit",
+            "boatName": "Le Dauphin Bleu",
+            "checkIn": "2024-09-04T11:00:00Z",
+            "checkOut": "2024-09-06T14:00:00Z"
+        },
+        {
+            "bookingId": 1007,
+            "catwayNumber": 9,
+            "clientName": "Thomas Roux",
+            "boatName": "La Perle Noire",
+            "checkIn": "2024-09-07T13:00:00Z",
+            "checkOut": "2024-09-09T12:00:00Z"
+        },
+        {
+            "bookingId": 1008,
+            "catwayNumber": 6,
+            "clientName": "Céline Blanc",
+            "boatName": "Le Corsaire",
+            "checkIn": "2024-09-10T10:00:00Z",
+            "checkOut": "2024-09-12T15:00:00Z"
+        },
+        {
+            "bookingId": 1009,
+            "catwayNumber": 8,
+            "clientName": "François Lemaire",
+            "boatName": "L'Albatros",
+            "checkIn": "2024-09-13T09:00:00Z",
+            "checkOut": "2024-09-15T11:00:00Z"
+        },
+        {
+            "bookingId": 1010,
+            "catwayNumber": 10,
+            "clientName": "Isabelle Girard",
+            "boatName": "La Mouette",
+            "checkIn": "2024-09-16T14:00:00Z",
+            "checkOut": "2024-09-18T10:00:00Z"
+        }
+]

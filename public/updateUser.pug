@@ -1,0 +1,15 @@
+doctype html
+html
+  head
+    title= title
+body 
+    h1= 'Uptade user : ' + user.name
+
+    form(action="/tableau-de-bord/updateUser/"+user._id method="POST") 
+        label(for="name") Name 
+        input(type="text" name="name" value=user.name) 
+        label(for="email")  Email 
+        input(type="email" name="email" value=user.email)  
+        label(for="password")  Password 
+        input(type="password" name="password" value=user.password) 
+        button(type="submit" style={'margin-left': 1+'rem'}) Modifier l'utilisateur
