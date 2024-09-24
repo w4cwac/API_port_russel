@@ -7,11 +7,11 @@ const private = require('../middlewares/private');
 
 router.get('/:id', service.getById);
 
-router.post('/', private.checkJWT, service.add);
+router.post('/',  service.add);
 
-router.patch('/:id', private.checkJWT, service.update);
+router.patch('/:id',  service.update);
 
-router.delete('/:id', private.checkJWT, service.delete);
+router.delete('/:id', service.delete);
 
 router.post('/authenticate', service.authenticate);
 
